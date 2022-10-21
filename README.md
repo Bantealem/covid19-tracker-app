@@ -5,7 +5,7 @@
 > covid19 Tracker
 - This react app displays the covid19 pandamic information by the country. Specfically it shows us the the confirmed cases in any country. I used Covid 19 API
 
-![screenshot](./public/Capture.png)
+![screenshot](./public/Capture.PNG)
 
 
 
