@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import LoadingBar from 'react-redux-loading-bar';
+import Home from './components/home/Home';
+import Details from './components/details/Details';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const routes = [
+  {
+    path: '/',
+    domain: 'Home',
+    element: <Home />,
+  },
+  {
+    path: '/country/:name',
+    domain: 'Details',
+    element: <Details />,
+  },
+];
+
+const App = () => (
+
+  <>
+    <LoadingBar className="App-loading-bar" />
+    <Routes>
+      {routes.map(({ path, element }) => (
+        <Route key={path} path={path} element={element} />
+      ))}
+    </Routes>
+  </>
+);
 
 export default App;
