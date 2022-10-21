@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -70,7 +71,7 @@ const Home = () => {
         <h5 className="App-header-title">confirmed cases</h5>
 
         <select name="continents" value={continent} id="continent" className="select-continent" onChange={changeContinent}>
-          <option value="Asia">--Select Another Continent----</option>
+          <option value="Asia">Select Another Continent</option>
           <option value="Europe">Europe</option>
           <option value="Africa">Africa</option>
           <option value="North America">North America</option>
