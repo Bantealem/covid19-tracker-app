@@ -58,7 +58,6 @@ npm test
 
 ## Author
 
-## Author
 
 👤 **Bantealem**
 
