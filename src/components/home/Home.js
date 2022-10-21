@@ -1,4 +1,5 @@
-/* eslint linebreak-style: ["error", "windows"] */
+/* eslint-disable react/jsx-one-expression-per-line */
+/* eslint-disable object-curly-newline */
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -70,7 +71,13 @@ const Home = () => {
         <h4>2022</h4>
         <h5 className="App-header-title">confirmed cases</h5>
 
-        <select name="continents" value={continent} id="continent" className="select-continent" onChange={changeContinent}>
+        <select
+          name="continents"
+          value={continent}
+          id="continent"
+          className="select-continent"
+          onChange={changeContinent}
+        >
           <option value="Asia">Select Another Continent</option>
           <option value="Europe">Europe</option>
           <option value="Africa">Africa</option>
@@ -91,7 +98,10 @@ const Home = () => {
         </div>
         <div className="home-sec-banner-right">
           <h1 className="title">{continent}</h1>
-          <p className="App-subtitle">{`${formatNumber(totalConfirmed)} cases`}</p>
+          <p className="App-subtitle">{`${formatNumber(
+            totalConfirmed,
+          )} cases`}
+          </p>
         </div>
       </div>
       <section className="home-sec-stats">
