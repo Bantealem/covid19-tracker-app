@@ -1,15 +1,15 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable object-curly-newline */
-import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { fetchCountries } from "../../redux/countries/countries";
-import Icon from "../Icon";
-import formatNumber from "../../redux/formatNumber";
-import "./Home.css";
-import virus from "../../assets/virus.svg";
-import world from "../../assets/europe.png";
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { fetchCountries } from '../../redux/countries/countries';
+import Icon from '../Icon';
+import formatNumber from '../../redux/formatNumber';
+import './Home.css';
+import virus from '../../assets/virus.svg';
+import world from '../../assets/europe.png';
 
 const Item = ({ confirmed, name }) => (
   <div className="home-sec-item-content">
@@ -44,7 +44,7 @@ const Home = () => {
     ...state.countries,
     loading: state.loadingBar.default,
   }));
-  const [continent, setContinent] = useState("Asia");
+  const [continent, setContinent] = useState('Asia');
 
   const changeContinent = (e) => {
     const search = e.target.value;
@@ -99,8 +99,9 @@ const Home = () => {
         <div className="home-sec-banner-right">
           <h1 className="title">{continent}</h1>
           <p className="App-subtitle">{`${formatNumber(
-            totalConfirmed
-          )} cases`}</p>
+            totalConfirmed,
+          )} cases`}
+          </p>
         </div>
       </div>
       <section className="home-sec-stats">
